@@ -1,0 +1,271 @@
+body {
+  height: 5000px;
+}
+
+.menu {
+  margin-top: 150px;
+}
+.menu__main-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/menu/main.jpeg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 40px;
+}
+
+.order-toggle {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  position: relative;
+  z-index: 1000;
+}
+
+.menu-section__title {
+  color: #d98434;
+  font-size: 3rem;
+  margin: 50px 0;
+}
+
+.menu-section__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+.card-img:hover img {
+  transform: scale(1.5);
+}
+
+.food-img {
+  transition: 0.4s;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6348;
+  margin-bottom: 10px;
+}
+
+.region-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.wine-type {
+  font-weight: 700;
+  color: #ff6348;
+  margin-bottom: 10px;
+}
+
+.drink-type {
+  font-weight: 700;
+  color: #ff6348;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-weight {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-volume {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.add-cart {
+  width: 100%;
+  background-color: rgba(54, 108, 55, 0.786);
+  color: white;
+  padding: 0px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+  height: 40px;
+}
+
+.add-cart:hover {
+  background-color: rgba(23, 149, 25, 0.786);
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  z-index: 1000;
+}
+
+.cart-active {
+  right: 50%;
+  transition: 0.5s;
+  transform: translate(50%,0);
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.cart-img {
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+}
+
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-food-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ff6348;
+  font-weight: 500;
+}
+
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 9.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 0;
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+.btn-buy {
+  padding: 12px 20px;
+  background-color: rgba(54, 108, 55, 0.786);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+  transition: 0.5s;
+}
+
+.btn-buy:hover {
+  background-color: rgba(23, 149, 25, 0.786);
+}
+
+#cart-close {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.box {
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  background-color: #2f3542;
+  top: -5px;
+  right: 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+#cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 10px;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .box {
+    position: absolute;
+    right: 18px;
+  }
+}
